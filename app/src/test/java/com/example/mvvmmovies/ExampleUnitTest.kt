@@ -1,4 +1,4 @@
-package com.example.mvvmrecycler
+package com.example.mvvmmovies
 
 import org.junit.Test
 

@@ -1,7 +1,7 @@
-package com.example.mvvmrecycler.domain
+package com.example.mvvmmovies.domain
 
-import com.example.mvvmrecycler.data.MovieRepository
-import com.example.mvvmrecycler.data.model.Movie
+import com.example.mvvmmovies.data.MovieRepository
+import com.example.mvvmmovies.data.model.Movie
 
 class GetMoviesUseCase {
     private val repository = MovieRepository()

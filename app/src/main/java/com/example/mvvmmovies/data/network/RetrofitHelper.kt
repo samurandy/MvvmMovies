@@ -1,4 +1,4 @@
-package com.example.mvvmrecycler.data.network
+package com.example.mvvmmovies.data.network
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

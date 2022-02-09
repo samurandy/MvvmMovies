@@ -1,6 +1,6 @@
-package com.example.mvvmrecycler.data
+package com.example.mvvmmovies.data
 
-import com.example.mvvmrecycler.data.network.MovieService
+import com.example.mvvmmovies.data.network.MovieService
 
 
 class MovieRepository {

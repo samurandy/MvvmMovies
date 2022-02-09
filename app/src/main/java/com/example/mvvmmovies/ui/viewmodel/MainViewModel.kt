@@ -1,10 +1,10 @@
-package com.example.mvvmrecycler.ui.viewmodel
+package com.example.mvvmmovies.ui.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.mvvmrecycler.data.model.Movie
-import com.example.mvvmrecycler.domain.GetMoviesUseCase
+import com.example.mvvmmovies.data.model.Movie
+import com.example.mvvmmovies.domain.GetMoviesUseCase
 import kotlinx.coroutines.launch
 
 class MainViewModel : ViewModel() {

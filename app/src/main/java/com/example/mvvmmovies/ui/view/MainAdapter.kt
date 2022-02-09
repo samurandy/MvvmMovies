@@ -1,11 +1,11 @@
-package com.example.mvvmrecycler.ui.view
+package com.example.mvvmmovies.ui.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.mvvmrecycler.databinding.AdapterMovieBinding
-import com.example.mvvmrecycler.data.model.Movie
+import com.example.mvvmmovies.databinding.AdapterMovieBinding
+import com.example.mvvmmovies.data.model.Movie
 
 class MainAdapter: RecyclerView.Adapter<MainViewHolder>() {
 

@@ -1,17 +1,14 @@
-package com.example.mvvmrecycler.ui.view
+package com.example.mvvmmovies.ui.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import androidx.activity.contextaware.withContextAvailable
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
-import com.example.mvvmrecycler.R
-import com.example.mvvmrecycler.databinding.ActivityMainBinding
-import com.example.mvvmrecycler.ui.viewmodel.MainViewModel
-import kotlinx.coroutines.Dispatchers
+import com.example.mvvmmovies.R
+import com.example.mvvmmovies.databinding.ActivityMainBinding
+import com.example.mvvmmovies.ui.viewmodel.MainViewModel
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
 class MainActivity : AppCompatActivity() {

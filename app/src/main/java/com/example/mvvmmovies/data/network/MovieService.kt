@@ -1,6 +1,6 @@
-package com.example.mvvmrecycler.data.network
+package com.example.mvvmmovies.data.network
 
-import com.example.mvvmrecycler.data.model.Movie
+import com.example.mvvmmovies.data.model.Movie
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import retrofit2.Response

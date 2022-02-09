@@ -1,4 +1,4 @@
-package com.example.mvvmrecycler.data.model
+package com.example.mvvmmovies.data.model
 
 import com.google.gson.annotations.SerializedName
 
