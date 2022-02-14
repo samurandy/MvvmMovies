@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.mvvmmovies.databinding.AdapterMovieBinding
 import com.example.mvvmmovies.data.model.Movie
 
-class MainAdapter: RecyclerView.Adapter<MainViewHolder>() {
+class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
     private var movies = mutableListOf<Movie>()
 

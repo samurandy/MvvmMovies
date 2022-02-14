@@ -1,10 +1,13 @@
 package com.example.mvvmmovies.data
 
 import com.example.mvvmmovies.data.network.MovieService
+import javax.inject.Inject
 
 
-class MovieRepository {
-    private val api = MovieService()
+class MovieRepository @Inject constructor(
+    private val api: MovieService
+) {
 
-    suspend fun getAllMovies() = api.getAllMovies()
+
+    suspend fun getAllMovies() = api.getAllMoviesWithException()
 }
