@@ -10,7 +10,7 @@ import javax.inject.Inject
 class MovieService @Inject constructor(private val api:MovieApiClient){
 
 
-    suspend fun getAllMoviesWithException(): Resource<List<Movie>> {
+    suspend fun getAllMovies(): Resource<List<Movie>> {
         return withContext(Dispatchers.IO) {
             try {
                 val response: Response<List<Movie>> = api.getAllMovies()

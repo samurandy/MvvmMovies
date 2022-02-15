@@ -9,5 +9,5 @@ class MovieRepository @Inject constructor(
 ) {
 
 
-    suspend fun getAllMovies() = api.getAllMoviesWithException()
+    suspend fun getAllMovies() = api.getAllMovies()
 }
