@@ -27,8 +27,7 @@ class MainViewModel @Inject constructor(
 
     suspend fun getAllMovies() {
         viewModelScope.launch {
-            val resource = getMoviesUseCase()
-            when (resource){
+            when (val resource = getMoviesUseCase()){
                 is Resource.Success -> movieList.postValue(resource.data)
                 is Resource.Error -> error.postValue(resource.message)
             }
