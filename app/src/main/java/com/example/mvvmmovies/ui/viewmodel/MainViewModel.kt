@@ -19,7 +19,7 @@ class MainViewModel @Inject constructor(
 
     val movieList = MutableLiveData<List<Movie>>()
     val error = MutableLiveData<String>()
-
+    var isLoading = MutableLiveData<Boolean>()
 
     val checkConnectivity: ConnectivityLiveData by lazy {
         ConnectivityLiveData(getApplication<Application>())
@@ -27,10 +27,12 @@ class MainViewModel @Inject constructor(
 
     suspend fun getAllMovies() {
         viewModelScope.launch {
+            isLoading.postValue(true)
             when (val resource = getMoviesUseCase()){
                 is Resource.Success -> movieList.postValue(resource.data)
                 is Resource.Error -> error.postValue(resource.message)
             }
+            isLoading.postValue(false)
         }
     }
 }

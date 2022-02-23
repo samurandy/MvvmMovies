@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.viewModels
+import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.mvvmmovies.R
@@ -43,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.error.observe(this,{
             toast(it)
+        })
+
+        viewModel.isLoading.observe(this, {
+            binding.progressBar.isVisible = it
         })
     }
 
