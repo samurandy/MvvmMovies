@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/drawable/color_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/drawable/layout_bg.xml" value="0.2703125" />
+        <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/layout/activity_detail.xml" value="0.12291666666666666" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/layout/activity_main.xml" value="0.25317028985507245" />
+        <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/layout/adapter_movie.xml" value="0.25317028985507245" />
+        <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmMovies/app/src/main/res/layout/item_card.xml" value="0.1" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmRecycler/app/src/main/res/layout/activity_main.xml" value="0.1793478260869565" />
         <entry key="..\:/Users/CHV/AndroidStudioProjects/MvvmRecycler/app/src/main/res/layout/adapter_movie.xml" value="0.1793478260869565" />
       </map>

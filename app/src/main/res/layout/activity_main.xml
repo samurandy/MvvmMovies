@@ -14,8 +14,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/color_bg"
         tools:itemCount="5"
-        tools:listitem="@layout/adapter_movie">
+        tools:listitem="@layout/item_card">
 
     </androidx.recyclerview.widget.RecyclerView>
 

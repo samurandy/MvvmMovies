@@ -9,7 +9,6 @@ class GetMoviesUseCase @Inject constructor(
     private val repository: MovieRepository
 ) {
 
-
     suspend operator fun invoke(): Resource<List<Movie>> {
         return repository.getAllMovies()
     }

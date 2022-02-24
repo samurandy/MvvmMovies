@@ -1,11 +1,12 @@
 package com.example.mvvmmovies.ui.view
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.example.mvvmmovies.databinding.AdapterMovieBinding
+import com.example.mvvmmovies.databinding.ItemCardBinding
 import com.example.mvvmmovies.data.model.Movie
+import com.example.mvvmmovies.utils.Extensions.Companion.glide
 
 class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
 
@@ -19,20 +20,28 @@ class MainAdapter : RecyclerView.Adapter<MainViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         val inflater = LayoutInflater.from(parent.context)
 
-        val binding = AdapterMovieBinding.inflate(inflater, parent, false)
+        val binding = ItemCardBinding.inflate(inflater, parent, false)
         return MainViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
         val movie = movies[position]
         holder.binding.name.text = movie.name
-        Glide.with(holder.itemView.context).load(movie.imageUrl).into(holder.binding.imageview)
+        movie.imageUrl?.let { holder.binding.imageview.glide(it) }
 
+        // ClickListener in recycler from Main to Detail
+        holder.binding.imageview.setOnClickListener { v ->
+            val intent = Intent(v.context, DetailActivity::class.java)
+            intent.putExtra(DetailActivity.EXTRA_ID, movies[position])
+            v.context.startActivity(intent)
+        }
     }
+
+
 
     override fun getItemCount(): Int {
         return movies.size
     }
 }
 
-class MainViewHolder(val binding: AdapterMovieBinding) : RecyclerView.ViewHolder(binding.root)
+class MainViewHolder(val binding: ItemCardBinding) : RecyclerView.ViewHolder(binding.root)

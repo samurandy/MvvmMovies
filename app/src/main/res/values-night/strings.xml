@@ -1,5 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MvvmMovies</string>
     <string name="movie_image_content_description">movie content description</string>
-    <string name="lorem_ipsum">Lorem ipsum</string>
 </resources>

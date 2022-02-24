@@ -1,12 +1,9 @@
 package com.example.mvvmmovies.ui.view
 
-import android.app.Application
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.viewModels
 import androidx.core.view.isVisible
-import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import com.example.mvvmmovies.R
 import com.example.mvvmmovies.databinding.ActivityMainBinding
@@ -19,15 +16,11 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
-    companion object {
-        const val TAG = "MainActivity"
-    }
 
     private lateinit var connectivityLiveData: ConnectivityLiveData
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
     private val adapter = MainAdapter()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         onMovieListObserve()
         onConnectionObserve()
 
-        viewModel.error.observe(this,{
+        viewModel.error.observe(this, {
             toast(it)
         })
 
@@ -53,7 +46,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun onMovieListObserve() {
         viewModel.movieList.observe(this, {
-            Log.d(TAG, "onCreate: $it")
             adapter.setMovieList(it)
         })
     }

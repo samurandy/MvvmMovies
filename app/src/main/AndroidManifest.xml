@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".MvvmMovies"
         android:allowBackup="true"
@@ -13,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MvvmRecycler">
         <activity
-            android:name="com.example.mvvmmovies.ui.view.MainActivity"
+            android:name=".ui.view.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
